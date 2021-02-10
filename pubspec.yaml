@@ -1,0 +1,23 @@
+name: sil_app_wrapper
+description: Wrapper entry point the provides app wide dependencies
+version: 0.0.1
+author: dmwangi@savannahinformatics.com
+homepage: https://gitlab.slade360emr.com/optimalhealth/sil_dart_utils
+
+environment:
+  sdk: ">=2.8.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  camera: ^0.5.7+3
+  local_auth: ^0.6.1
+  platform_detect: ^1.4.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mockito: ^4.1.1
+  pedantic: ^1.4.0
+
+flutter:
