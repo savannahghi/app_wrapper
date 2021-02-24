@@ -5,7 +5,7 @@ author: dmwangi@savannahinformatics.com
 homepage: https://gitlab.slade360emr.com/optimalhealth/sil_dart_utils
 
 environment:
-  sdk: ">=2.8.0 <3.0.0"
+  sdk: '>=2.8.0 <3.0.0'
 
 dependencies:
   flutter:
@@ -13,6 +13,14 @@ dependencies:
   camera: ^0.5.7+3
   local_auth: ^0.6.1
   platform_detect: ^1.4.0
+  sil_graphql_client:
+    git:
+      url: https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_graphql_client.git
+      ref: 0.0.1
+  sil_http_client:
+    git:
+      url: https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_http_client.git
+      ref: 0.0.2
 
 dev_dependencies:
   flutter_test:
