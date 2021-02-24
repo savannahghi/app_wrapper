@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+  firebase_performance:
+    dependency: transitive
+    description:
+      name: firebase_performance
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.3.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -74,6 +81,20 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  http:
+    dependency: transitive
+    description:
+      name: http
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.12.2"
+  http_parser:
+    dependency: transitive
+    description:
+      name: http_parser
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "3.1.4"
   intl:
     dependency: transitive
     description:
@@ -144,6 +165,24 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.4.4"
+  sil_graphql_client:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "0.0.1"
+      resolved-ref: "84063a1da86ea0e8cbd33007a45314e9c33296a4"
+      url: "https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_graphql_client.git"
+    source: git
+    version: "0.0.1"
+  sil_http_client:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "0.0.2"
+      resolved-ref: "6bf7b22313481858908cd29910b5c5bfa0ddc294"
+      url: "https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_http_client.git"
+    source: git
+    version: "0.0.1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -207,4 +246,4 @@ packages:
     version: "2.1.0-nullsafety.3"
 sdks:
   dart: ">=2.10.0-110 <2.11.0"
-  flutter: ">=1.12.13+hotfix.5 <2.0.0"
+  flutter: ">=1.17.0 <2.0.0"
