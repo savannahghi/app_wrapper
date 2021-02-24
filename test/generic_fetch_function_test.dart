@@ -3,15 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sil_app_wrapper/generic_fetch_function.dart';
+import 'package:sil_app_wrapper/models/enums/enums.dart';
 
-import 'package:sil_app_wrapper/sil_app_wrapper.dart' as wrapper;
+import 'package:sil_graphql_client/sil_graphql_client.dart';
+
+import 'package:sil_app_wrapper/sil_app_wrapper.dart';
 
 // Different expected Responses from SimpleCall
 Map<String, dynamic> successfulResponse = <String, dynamic>{
   'statusCode': '200',
 };
 Map<String, dynamic> errorResponse = <String, dynamic>{
-  'error': 'error occured',
+  'error': 'error occurred',
 };
 Map<String, dynamic> timeoutResponse = <String, dynamic>{
   'statusCode': 408,
@@ -29,16 +32,16 @@ Map<String, dynamic> timeOutEvent = <String, dynamic>{
 };
 
 Future<Map<String, dynamic>> mockSuccessfulSimpleCallType({
-  dynamic graphClient,
-  dynamic querystring,
+  SILGraphQlClient graphClient,
+  String queryString,
   dynamic variables,
   BuildContext context,
 }) async =>
     await successfulResponse;
 
 Future<Map<String, dynamic>> mockSimpleCallErrorType({
-  dynamic graphClient,
-  dynamic querystring,
+  SILGraphQlClient graphClient,
+  String queryString,
   dynamic variables,
   BuildContext context,
 }) async {
@@ -46,8 +49,8 @@ Future<Map<String, dynamic>> mockSimpleCallErrorType({
 }
 
 Future<Map<String, dynamic>> mockSimpleCallTimeOut({
-  dynamic graphClient,
-  dynamic querystring,
+  SILGraphQlClient graphClient,
+  String queryString,
   dynamic variables,
   BuildContext context,
 }) async {
@@ -71,11 +74,11 @@ void main() {
       StreamController<dynamic> controller = StreamController<dynamic>();
 
       await tester.pumpWidget(MaterialApp(
-        home: wrapper.SILAppWrapper(
-          context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+        home: SILAppWrapper(
+          context: <AppContext>[AppContext.AppProd],
           appName: '',
-          graphQLClient: '',
-          httpClient: '',
+          graphQLClient: null,
+          httpClient: null,
           child: Builder(builder: (BuildContext context) {
             genericFetchFunction(
               streamController: controller,
@@ -107,11 +110,11 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
-          home: wrapper.SILAppWrapper(
-            context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+          home: SILAppWrapper(
+            context: <AppContext>[AppContext.AppProd],
             appName: '',
-            graphQLClient: '',
-            httpClient: '',
+            graphQLClient: null,
+            httpClient: null,
             child: Builder(
               builder: (BuildContext context) {
                 return RawMaterialButton(
@@ -149,11 +152,11 @@ void main() {
 
       await tester.pumpWidget(
         MaterialApp(
-          home: wrapper.SILAppWrapper(
-            context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+          home: SILAppWrapper(
+            context: <AppContext>[AppContext.AppProd],
             appName: '',
-            graphQLClient: '',
-            httpClient: '',
+            graphQLClient: null,
+            httpClient: null,
             child: Builder(
               builder: (BuildContext context) {
                 return RawMaterialButton(

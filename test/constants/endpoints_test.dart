@@ -1,5 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:sil_app_wrapper/constants/endpoints.dart';
+import 'package:sil_app_wrapper/models/enums/enums.dart';
 import 'package:sil_app_wrapper/sil_app_wrapper.dart';
 
 void main() {
