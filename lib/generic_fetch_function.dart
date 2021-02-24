@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:sil_app_wrapper/sil_app_wrapper.dart';
+import 'package:sil_graphql_client/sil_graphql_client.dart';
 
 typedef TraceLogType = void Function(
     {dynamic client,
@@ -13,8 +14,8 @@ typedef TraceLogType = void Function(
     BuildContext context});
 
 typedef SimpleCallType = Future<Map<String, dynamic>> Function(
-    {dynamic graphClient,
-    dynamic querystring,
+    {SILGraphQlClient graphClient,
+    String queryString,
     dynamic variables,
     BuildContext context});
 
@@ -28,13 +29,13 @@ Future<void> genericFetchFunction({
   @required SimpleCallType simpleCallFunc,
   bool rawResponse,
 }) async {
-  // indicate processing onging on
+  // indicate processing going on
   streamController.add(<String, dynamic>{'loading': true});
 
   /// fetch the data from the api
   Map<String, dynamic> response = await simpleCallFunc(
     context: context,
-    querystring: queryString,
+    queryString: queryString,
     variables: variables ?? <String, dynamic>{},
     graphClient: SILAppWrapperBase.of(context).graphQLClient,
   );
@@ -44,7 +45,7 @@ Future<void> genericFetchFunction({
       query: queryString,
       data: variables ?? <String, dynamic>{},
       response: response,
-      title: 'Get terms and conditionsile',
+      title: 'Get terms and conditions',
       description: 'Get terms and conditions',
       context: context);
 

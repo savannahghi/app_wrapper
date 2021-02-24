@@ -5,30 +5,9 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:local_auth/local_auth.dart';
 import 'package:sil_app_wrapper/constants/endpoints.dart';
-
-enum DeviceScreenType { Mobile, Tablet, Desktop }
-
-/// [AppContext] a finite enum of environments where savannah flutter apps
-/// run
-enum AppContext {
-  /// [BewellCONSUMER] savannah bewell consumer
-  BewellCONSUMER,
-
-  /// [BewellPRO] savannah bewell professional
-  BewellPRO,
-
-  /// [AppTest] app running on test environment. This indicates that the will call a specific
-  /// endpoint specifically for testing
-  AppTest,
-
-  /// [AppDemo] app running on demo environment. This indicates that the will call a specific
-  /// endpoint specifically for demo
-  AppDemo,
-
-  /// [AppProd] app running on prod environment. This indicates that the will call a specific
-  /// endpoint specifically for production
-  AppProd,
-}
+import 'package:sil_app_wrapper/models/enums/enums.dart';
+import 'package:sil_graphql_client/sil_graphql_client.dart';
+import 'package:sil_http_client/sil_http_client.dart';
 
 class SILAppWrapper extends StatefulWidget {
   /// [child] the widget that will be wrapped by this wrapper
@@ -41,23 +20,23 @@ class SILAppWrapper extends StatefulWidget {
   final dynamic eventBus;
 
   /// [graphQLClient] is the graphql client from sil_graphql_client package
-  /// it is dyanamic to avoid cylic-dependency errors when packages
+  /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final dynamic graphQLClient;
+  final SILGraphQlClient graphQLClient;
 
   /// [httpClient] is the http client from sil_http_client package
-  /// it is dyanamic to avoid cylic-dependency errors when packages
+  /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final dynamic httpClient;
+  final SILHttpClient httpClient;
 
   /// [context] is the environment which the app is running on. In app can run
-  /// on multuple contexts, the intution why [context] is a list.
+  /// on multiple contexts, the intuition why [context] is a list.
   /// example of contexts;
-  ///  - sil
-  ///  - apa
-  ///  - test
   ///
-  /// An app shoule have at least one context
+  /// BewellCONSUMER
+  /// BewellPRO
+  ///
+  /// An app should have at least one context
   final List<AppContext> context;
 
   SILAppWrapper({
@@ -109,14 +88,14 @@ class SILAppWrapperBase extends InheritedWidget {
   final dynamic eventBus;
 
   /// [graphQLClient] is the graphql client from sil_graphql_client package
-  /// it is dyanamic to avodi cylic-dependency errors when packages
+  /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final dynamic graphQLClient;
+  final SILGraphQlClient graphQLClient;
 
   /// [httpClient] is the http client from sil_http_client package
-  /// it is dyanamic to avoid cylic-dependency errors when packages
+  /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final dynamic httpClient;
+  final SILHttpClient httpClient;
 
   /// [context] is the app running environments
   final List<AppContext> context;

@@ -4,26 +4,26 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:local_auth/local_auth.dart';
 
 import 'package:mockito/mockito.dart';
-import 'package:sil_app_wrapper/sil_app_wrapper.dart' as wrapper;
+import 'package:sil_app_wrapper/models/enums/enums.dart';
+import 'package:sil_app_wrapper/sil_app_wrapper.dart';
 
-class MockDeviceCapabilities extends Mock
-    implements wrapper.DeviceCapabilities {}
+class MockDeviceCapabilities extends Mock implements DeviceCapabilities {}
 
 class MockLocalAuth extends Mock implements LocalAuthentication {}
 
-class MockCameraWrapper extends Mock implements wrapper.CameraWrapper {}
+class MockCameraWrapper extends Mock implements CameraWrapper {}
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('should test silAppWrapper', (WidgetTester tester) async {
     await tester.pumpWidget(MaterialApp(
-        home: wrapper.SILAppWrapper(
+        home: SILAppWrapper(
       appName: '',
-      graphQLClient: '',
-      httpClient: '',
+      graphQLClient: null,
+      httpClient: null,
       child: Container(),
-      context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+      context: <AppContext>[AppContext.AppProd],
     )));
     Finder silAppWrapperKey = find.byKey(Key('sil_app_wrapper'));
     expect(silAppWrapperKey, findsOneWidget);
@@ -33,10 +33,10 @@ void main() {
       (WidgetTester tester) async {
     expect(() async {
       await tester.pumpWidget(MaterialApp(
-        home: wrapper.SILAppWrapper(
+        home: SILAppWrapper(
           appName: '',
-          graphQLClient: '',
-          httpClient: '',
+          graphQLClient: null,
+          httpClient: null,
           child: Container(),
           context: null,
         ),
@@ -60,7 +60,7 @@ void main() {
   });
 
   test('should call local auth when getting biometrics', () {
-    final wrapper.DeviceCapabilities device = wrapper.DeviceCapabilities();
+    final DeviceCapabilities device = DeviceCapabilities();
     final MockLocalAuth localAuth = MockLocalAuth();
     when(localAuth.getAvailableBiometrics()).thenAnswer((_) =>
         Future<List<BiometricType>>.value(
@@ -75,8 +75,8 @@ void main() {
             <BiometricType>[BiometricType.face, BiometricType.fingerprint]));
   });
 
-  test('should check if camaras are available', () {
-    final wrapper.DeviceCapabilities device = wrapper.DeviceCapabilities();
+  test('should check if cameras are available', () {
+    final DeviceCapabilities device = DeviceCapabilities();
     final MockCameraWrapper cams = MockCameraWrapper();
     when(cams.cameras).thenAnswer((_) => Future<List<CameraDescription>>.value(
         <CameraDescription>[CameraDescription()]));
@@ -84,16 +84,16 @@ void main() {
     expect(device.checkCameras(cams), completion(true));
   });
 
-  test('should return null if camaras are not available', () {
-    final wrapper.DeviceCapabilities device = wrapper.DeviceCapabilities();
+  test('should return null if cameras are not available', () {
+    final DeviceCapabilities device = DeviceCapabilities();
     final MockCameraWrapper cams = MockCameraWrapper();
     when(cams.cameras).thenAnswer(
         (_) => Future<List<CameraDescription>>.value(<CameraDescription>[]));
     expect(device.getCameras(cams), completion(null));
   });
 
-  test('should return camaras if camera(s) is/are noavailable', () {
-    final wrapper.DeviceCapabilities device = wrapper.DeviceCapabilities();
+  test('should return cameras if camera(s) is/are not available', () {
+    final DeviceCapabilities device = DeviceCapabilities();
     final MockCameraWrapper cams = MockCameraWrapper();
     when(cams.cameras).thenAnswer((_) => Future<List<CameraDescription>>.value(
         <CameraDescription>[CameraDescription()]));
@@ -101,7 +101,7 @@ void main() {
   });
 
   test('camera wrapper should fail', () {
-    wrapper.CameraWrapper wrap = wrapper.CameraWrapper();
+    CameraWrapper wrap = CameraWrapper();
     expect(() => wrap.cameras, throwsException);
   });
 
@@ -109,82 +109,82 @@ void main() {
     testWidgets(
         'should check for silAppWrapperBase on widget tree and test for valid deviceCapabilities and screenType on method call',
         (WidgetTester tester) async {
-      wrapper.DeviceCapabilities deviceCapabillities;
-      wrapper.DeviceScreenType screenType;
+      DeviceCapabilities deviceCapabilities;
+      DeviceScreenType screenType;
 
       await tester.pumpWidget(MaterialApp(
-        home: wrapper.SILAppWrapperBase(
+        home: SILAppWrapperBase(
           appName: '',
-          graphQLClient: '',
-          httpClient: '',
+          graphQLClient: null,
+          httpClient: null,
           child: Builder(builder: (BuildContext context) {
-            deviceCapabillities =
-                wrapper.SILAppWrapperBase.of(context).deviceCapabilities;
+            deviceCapabilities =
+                SILAppWrapperBase.of(context).deviceCapabilities;
             screenType =
-                wrapper.SILAppWrapperBase.of(context).deviceScreenType(context);
+                SILAppWrapperBase.of(context).deviceScreenType(context);
             return Container();
           }),
-          context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+          context: <AppContext>[AppContext.AppProd],
         ),
       ));
 
-      expect(find.byType(wrapper.SILAppWrapperBase), findsOneWidget);
-      expect(deviceCapabillities, isA<wrapper.DeviceCapabilities>());
-      expect(screenType, isA<wrapper.DeviceScreenType>());
+      expect(find.byType(SILAppWrapperBase), findsOneWidget);
+      expect(deviceCapabilities, isA<DeviceCapabilities>());
+      expect(screenType, isA<DeviceScreenType>());
     });
 
     testWidgets('should check that silAppWrapperBase notifies dependants',
         (WidgetTester tester) async {
-      final List<wrapper.SILAppWrapperBase> log = <wrapper.SILAppWrapperBase>[];
+      final List<SILAppWrapperBase> log = <SILAppWrapperBase>[];
 
       final Builder builder = Builder(builder: (BuildContext context) {
-        log.add(context
-            .dependOnInheritedWidgetOfExactType<wrapper.SILAppWrapperBase>());
+        log.add(
+            context.dependOnInheritedWidgetOfExactType<SILAppWrapperBase>());
         return Container();
       });
 
-      final wrapper.SILAppWrapperBase first = wrapper.SILAppWrapperBase(
+      final SILAppWrapperBase first = SILAppWrapperBase(
         appName: '',
-        graphQLClient: '',
-        httpClient: '',
+        graphQLClient: null,
+        httpClient: null,
         child: builder,
-        context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+        context: <AppContext>[AppContext.AppProd],
       );
       await tester.pumpWidget(first);
 
-      final wrapper.SILAppWrapperBase second = wrapper.SILAppWrapperBase(
+      final SILAppWrapperBase second = SILAppWrapperBase(
         appName: '',
-        graphQLClient: '',
-        httpClient: '',
+        graphQLClient: null,
+        httpClient: null,
         child: builder,
-        context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+        context: <AppContext>[AppContext.AppProd],
         shouldNotify: false,
       );
       await tester.pumpWidget(second);
 
-      expect(log, equals(<wrapper.SILAppWrapperBase>[first]));
+      expect(log, equals(<SILAppWrapperBase>[first]));
 
-      final wrapper.SILAppWrapperBase third = wrapper.SILAppWrapperBase(
+      final SILAppWrapperBase third = SILAppWrapperBase(
         appName: '',
-        graphQLClient: '',
-        httpClient: '',
+        graphQLClient: null,
+        httpClient: null,
         child: builder,
-        context: <wrapper.AppContext>[wrapper.AppContext.AppProd],
+        context: <AppContext>[AppContext.AppProd],
         shouldNotify: true,
       );
       await tester.pumpWidget(third);
 
-      expect(log, equals(<wrapper.SILAppWrapperBase>[first, third]));
+      expect(log, equals(<SILAppWrapperBase>[first, third]));
     });
 
     testWidgets('should test silAppWrapperBase null check',
         (WidgetTester tester) async {
       expect(() async {
         await tester.pumpWidget(MaterialApp(
-          home: wrapper.SILAppWrapperBase(
+          home: SILAppWrapperBase(
             appName: '',
-            graphQLClient: '',
-            httpClient: '',
+            graphQLClient: null,
+            httpClient: null,
             child: Container(),
             context: null,
           ),
