@@ -1,49 +1,50 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sil_app_wrapper/sil_app_wrapper.dart';
-import 'package:sil_graphql_client/sil_graphql_client.dart';
+
+import 'package:sil_app_wrapper/sil_app_wrapper_base.dart';
+import 'package:sil_graphql_client/graph_client.dart';
 
 typedef TraceLogType = void Function(
-    {dynamic client,
+    {required SILGraphQlClient client,
     dynamic query,
     dynamic data,
     dynamic response,
-    String title,
-    String description,
-    BuildContext context});
+    required String title,
+    String? description,
+    required BuildContext context});
 
 typedef SimpleCallType = Future<Map<String, dynamic>> Function(
-    {SILGraphQlClient graphClient,
+    {required SILGraphQlClient graphClient,
     String queryString,
     dynamic variables,
-    BuildContext context});
+    required BuildContext context});
 
 Future<void> genericFetchFunction({
-  @required StreamController<dynamic> streamController,
-  @required BuildContext context,
-  @required String queryString,
-  @required Map<String, dynamic> variables,
-  @required String logTitle,
-  @required TraceLogType traceLogFunc,
-  @required SimpleCallType simpleCallFunc,
-  bool rawResponse,
+  required StreamController<dynamic> streamController,
+  required BuildContext context,
+  required String queryString,
+  Map<String, dynamic>? variables,
+  required String logTitle,
+  required TraceLogType traceLogFunc,
+  required SimpleCallType simpleCallFunc,
+  bool? rawResponse,
 }) async {
   // indicate processing going on
   streamController.add(<String, dynamic>{'loading': true});
 
   /// fetch the data from the api
-  Map<String, dynamic> response = await simpleCallFunc(
+  final Map<String, dynamic> response = await simpleCallFunc(
     context: context,
     queryString: queryString,
-    variables: variables ?? <String, dynamic>{},
-    graphClient: SILAppWrapperBase.of(context).graphQLClient,
+    variables: variables,
+    graphClient: SILAppWrapperBase.of(context)!.graphQLClient,
   );
 
   traceLogFunc(
-      client: SILAppWrapperBase.of(context).graphQLClient,
+      client: SILAppWrapperBase.of(context)!.graphQLClient,
       query: queryString,
-      data: variables ?? <String, dynamic>{},
+      data: variables,
       response: response,
       title: 'Get terms and conditions',
       description: 'Get terms and conditions',
