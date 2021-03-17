@@ -498,8 +498,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "0.0.4-nullsafety"
-      resolved-ref: abf0c4a1fa69019ebabfe22e78fc5516c2133190
+      ref: "0.0.5-nullsafety"
+      resolved-ref: "628240d687f9c34ef785a9ac742d0fa4c157552e"
       url: "https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_graphql_client.git"
     source: git
     version: "0.0.1"
