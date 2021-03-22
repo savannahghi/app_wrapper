@@ -20,4 +20,8 @@ enum AppContext {
   /// [AppProd] app running on prod environment. This indicates that the will call a specific
   /// endpoint specifically for production
   AppProd,
+
+  /// [AppE2E] app running in E2E environment. This indicates that the will
+  /// call a specific endpoint for E2E testing
+  AppE2E,
 }
