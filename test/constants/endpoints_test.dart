@@ -20,116 +20,162 @@ void main() {
     AppContext.AppTest
   ];
 
-  test('test endpoints', () {
-    // prod endpoints
-    expect(
-        EndpointContext.getGraphQLEndpoint(prodContext), kProdGraphqlEndpoint);
+  final List<AppContext> e2eContext = <AppContext>[
+    AppContext.BewellPRO,
+    AppContext.AppE2E
+  ];
 
-    expect(EndpointContext.loginByPhoneEndpoint(prodContext),
-        kProdLoginByPhoneEndpoint);
+  group('test endpoints', () {
+    test('prod endpoints', () {
+      expect(EndpointContext.getGraphQLEndpoint(prodContext),
+          kProdGraphqlEndpoint);
 
-    expect(EndpointContext.resetPinResetEndpoint(prodContext),
-        kProdPinResetEndpoint);
+      expect(EndpointContext.loginByPhoneEndpoint(prodContext),
+          kProdLoginByPhoneEndpoint);
 
-    expect(EndpointContext.updateUserPinEndpoint(prodContext),
-        kProdUpdateUserPinEndpoint);
+      expect(EndpointContext.resetPinResetEndpoint(prodContext),
+          kProdPinResetEndpoint);
 
-    expect(EndpointContext.verifyPhoneEndpoint(prodContext),
-        kProdVerifyPhoneEndpoint);
+      expect(EndpointContext.updateUserPinEndpoint(prodContext),
+          kProdUpdateUserPinEndpoint);
 
-    expect(EndpointContext.createUserByPhoneEndpoint(prodContext),
-        kProdCreateUserByPhoneEndpoint);
+      expect(EndpointContext.verifyPhoneEndpoint(prodContext),
+          kProdVerifyPhoneEndpoint);
 
-    expect(EndpointContext.retrySendOtpEndpoint(prodContext),
-        kProdRetryResendOtpEndpoint);
+      expect(EndpointContext.createUserByPhoneEndpoint(prodContext),
+          kProdCreateUserByPhoneEndpoint);
 
-    expect(EndpointContext.refreshTokenEndpoint(prodContext),
-        kProdRefreshTokenEndpoint);
+      expect(EndpointContext.retrySendOtpEndpoint(prodContext),
+          kProdRetryResendOtpEndpoint);
 
-    expect(EndpointContext.anonymousLoginEndpoint(prodContext),
-        kProdAnonymousLoginEndpoint);
+      expect(EndpointContext.refreshTokenEndpoint(prodContext),
+          kProdRefreshTokenEndpoint);
 
-    expect(EndpointContext.userRecoveryPhoneNumbers(prodContext),
-        kProdUserRecoveryPhoneNumbersEndpoint);
+      expect(EndpointContext.anonymousLoginEndpoint(prodContext),
+          kProdAnonymousLoginEndpoint);
 
-    expect(EndpointContext.sendRecoverAccountOTP(prodContext),
-        kProdSendRecoverAccountOtpEndpoint);
+      expect(EndpointContext.userRecoveryPhoneNumbers(prodContext),
+          kProdUserRecoveryPhoneNumbersEndpoint);
 
-    expect(EndpointContext.setPrimaryPhoneNumber(prodContext),
-        kProdSetPrimaryPhoneNumberEndpoint);
+      expect(EndpointContext.sendRecoverAccountOTP(prodContext),
+          kProdSendRecoverAccountOtpEndpoint);
 
-    // demo endpoints
-    expect(
-        EndpointContext.getGraphQLEndpoint(demoContext), kDemoGraphqlEndpoint);
+      expect(EndpointContext.setPrimaryPhoneNumber(prodContext),
+          kProdSetPrimaryPhoneNumberEndpoint);
+    });
 
-    expect(EndpointContext.loginByPhoneEndpoint(demoContext),
-        kDemoLoginByPhoneEndpoint);
+    test('demo endpoints', () {
+      expect(EndpointContext.getGraphQLEndpoint(demoContext),
+          kDemoGraphqlEndpoint);
 
-    expect(EndpointContext.resetPinResetEndpoint(demoContext),
-        kDemoPinResetEndpoint);
+      expect(EndpointContext.loginByPhoneEndpoint(demoContext),
+          kDemoLoginByPhoneEndpoint);
 
-    expect(EndpointContext.updateUserPinEndpoint(demoContext),
-        kDemoUpdateUserPinEndpoint);
+      expect(EndpointContext.resetPinResetEndpoint(demoContext),
+          kDemoPinResetEndpoint);
 
-    expect(EndpointContext.verifyPhoneEndpoint(demoContext),
-        kDemoVerifyPhoneEndpoint);
+      expect(EndpointContext.updateUserPinEndpoint(demoContext),
+          kDemoUpdateUserPinEndpoint);
 
-    expect(EndpointContext.createUserByPhoneEndpoint(demoContext),
-        kDemoCreateUserByPhoneEndpoint);
+      expect(EndpointContext.verifyPhoneEndpoint(demoContext),
+          kDemoVerifyPhoneEndpoint);
 
-    expect(EndpointContext.retrySendOtpEndpoint(demoContext),
-        kDemoRetryResendOtpEndpoint);
+      expect(EndpointContext.createUserByPhoneEndpoint(demoContext),
+          kDemoCreateUserByPhoneEndpoint);
 
-    expect(EndpointContext.refreshTokenEndpoint(demoContext),
-        kDemoRefreshTokenEndpoint);
+      expect(EndpointContext.retrySendOtpEndpoint(demoContext),
+          kDemoRetryResendOtpEndpoint);
 
-    expect(EndpointContext.anonymousLoginEndpoint(demoContext),
-        kDemoAnonymousLoginEndpoint);
+      expect(EndpointContext.refreshTokenEndpoint(demoContext),
+          kDemoRefreshTokenEndpoint);
 
-    expect(EndpointContext.userRecoveryPhoneNumbers(demoContext),
-        kDemoUserRecoveryPhoneNumbersEndpoint);
+      expect(EndpointContext.anonymousLoginEndpoint(demoContext),
+          kDemoAnonymousLoginEndpoint);
 
-    expect(EndpointContext.sendRecoverAccountOTP(demoContext),
-        kDemoSendRecoverAccountOtpEndpoint);
+      expect(EndpointContext.userRecoveryPhoneNumbers(demoContext),
+          kDemoUserRecoveryPhoneNumbersEndpoint);
 
-    expect(EndpointContext.setPrimaryPhoneNumber(demoContext),
-        kDemoSetPrimaryPhoneNumberEndpoint);
+      expect(EndpointContext.sendRecoverAccountOTP(demoContext),
+          kDemoSendRecoverAccountOtpEndpoint);
 
-    // test endpoints
-    expect(
-        EndpointContext.getGraphQLEndpoint(testContext), kTestGraphqlEndpoint);
+      expect(EndpointContext.setPrimaryPhoneNumber(demoContext),
+          kDemoSetPrimaryPhoneNumberEndpoint);
+    });
 
-    expect(EndpointContext.loginByPhoneEndpoint(testContext),
-        kTestLoginByPhoneEndpoint);
+    test('test endpoints', () {
+      expect(EndpointContext.getGraphQLEndpoint(testContext),
+          kTestGraphqlEndpoint);
 
-    expect(EndpointContext.resetPinResetEndpoint(testContext),
-        kTestPinResetEndpoint);
+      expect(EndpointContext.loginByPhoneEndpoint(testContext),
+          kTestLoginByPhoneEndpoint);
 
-    expect(EndpointContext.updateUserPinEndpoint(testContext),
-        kTestUpdateUserPinEndpoint);
+      expect(EndpointContext.resetPinResetEndpoint(testContext),
+          kTestPinResetEndpoint);
 
-    expect(EndpointContext.verifyPhoneEndpoint(testContext),
-        kTestVerifyPhoneEndpoint);
+      expect(EndpointContext.updateUserPinEndpoint(testContext),
+          kTestUpdateUserPinEndpoint);
 
-    expect(EndpointContext.createUserByPhoneEndpoint(testContext),
-        kTestCreateUserByPhoneEndpoint);
+      expect(EndpointContext.verifyPhoneEndpoint(testContext),
+          kTestVerifyPhoneEndpoint);
 
-    expect(EndpointContext.retrySendOtpEndpoint(testContext),
-        kTestRetryResendOtpEndpoint);
+      expect(EndpointContext.createUserByPhoneEndpoint(testContext),
+          kTestCreateUserByPhoneEndpoint);
 
-    expect(EndpointContext.refreshTokenEndpoint(testContext),
-        kTestRefreshTokenEndpoint);
+      expect(EndpointContext.retrySendOtpEndpoint(testContext),
+          kTestRetryResendOtpEndpoint);
 
-    expect(EndpointContext.anonymousLoginEndpoint(testContext),
-        kTestAnonymousLoginEndpoint);
+      expect(EndpointContext.refreshTokenEndpoint(testContext),
+          kTestRefreshTokenEndpoint);
 
-    expect(EndpointContext.userRecoveryPhoneNumbers(testContext),
-        kTestUserRecoveryPhoneNumbersEndpoint);
+      expect(EndpointContext.anonymousLoginEndpoint(testContext),
+          kTestAnonymousLoginEndpoint);
 
-    expect(EndpointContext.sendRecoverAccountOTP(testContext),
-        kTestSendRecoverAccountOtpEndpoint);
+      expect(EndpointContext.userRecoveryPhoneNumbers(testContext),
+          kTestUserRecoveryPhoneNumbersEndpoint);
 
-    expect(EndpointContext.setPrimaryPhoneNumber(testContext),
-        kTestSetPrimaryPhoneNumberEndpoint);
+      expect(EndpointContext.sendRecoverAccountOTP(testContext),
+          kTestSendRecoverAccountOtpEndpoint);
+
+      expect(EndpointContext.setPrimaryPhoneNumber(testContext),
+          kTestSetPrimaryPhoneNumberEndpoint);
+    });
+
+    test('e2e endpoints', () {
+      expect(
+          EndpointContext.getGraphQLEndpoint(e2eContext), ke2eGraphqlEndpoint);
+
+      expect(EndpointContext.loginByPhoneEndpoint(e2eContext),
+          ke2eLoginByPhoneEndpoint);
+
+      expect(EndpointContext.resetPinResetEndpoint(e2eContext),
+          ke2ePinResetEndpoint);
+
+      expect(EndpointContext.updateUserPinEndpoint(e2eContext),
+          ke2eUpdateUserPinEndpoint);
+
+      expect(EndpointContext.verifyPhoneEndpoint(e2eContext),
+          ke2eVerifyPhoneEndpoint);
+
+      expect(EndpointContext.createUserByPhoneEndpoint(e2eContext),
+          ke2eCreateUserByPhoneEndpoint);
+
+      expect(EndpointContext.retrySendOtpEndpoint(e2eContext),
+          ke2eRetryResendOtpEndpoint);
+
+      expect(EndpointContext.refreshTokenEndpoint(e2eContext),
+          ke2eRefreshTokenEndpoint);
+
+      expect(EndpointContext.anonymousLoginEndpoint(e2eContext),
+          ke2eAnonymousLoginEndpoint);
+
+      expect(EndpointContext.userRecoveryPhoneNumbers(e2eContext),
+          ke2eUserRecoveryPhoneNumbersEndpoint);
+
+      expect(EndpointContext.sendRecoverAccountOTP(e2eContext),
+          ke2eSendRecoverAccountOtpEndpoint);
+
+      expect(EndpointContext.setPrimaryPhoneNumber(e2eContext),
+          ke2eSetPrimaryPhoneNumberEndpoint);
+    });
   });
 }

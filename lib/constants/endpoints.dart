@@ -74,3 +74,28 @@ const String kDemoSendRecoverAccountOtpEndpoint =
     'https://profile-demo.healthcloud.co.ke/send_otp';
 const String kDemoSetPrimaryPhoneNumberEndpoint =
     'https://profile-demo.healthcloud.co.ke/set_primary_phonenumber';
+
+/* E2E ENDPOINTS */
+const String ke2eGraphqlEndpoint = 'https://graph-e2e.bewell.co.ke/graphql';
+const String ke2eLoginByPhoneEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/login_by_phone';
+const String ke2ePinResetEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/request_pin_reset';
+const String ke2eUpdateUserPinEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/reset_pin';
+const String ke2eVerifyPhoneEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/verify_phone';
+const String ke2eCreateUserByPhoneEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/create_user_by_phone';
+const String ke2eRetryResendOtpEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/send_retry_otp';
+const String ke2eRefreshTokenEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/refresh_token';
+const String ke2eAnonymousLoginEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/login_anonymous';
+const String ke2eUserRecoveryPhoneNumbersEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/user_recovery_phonenumbers';
+const String ke2eSendRecoverAccountOtpEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/send_otp';
+const String ke2eSetPrimaryPhoneNumberEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/set_primary_phonenumber';
