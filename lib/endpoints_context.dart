@@ -11,6 +11,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoGraphqlEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eGraphqlEndpoint;
+    }
     return kTestGraphqlEndpoint;
   }
 
@@ -22,6 +25,11 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoLoginByPhoneEndpoint;
     }
+
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eLoginByPhoneEndpoint;
+    }
+
     return kTestLoginByPhoneEndpoint;
   }
 
@@ -31,6 +39,9 @@ class EndpointContext {
     }
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoPinResetEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2ePinResetEndpoint;
     }
     return kTestPinResetEndpoint;
   }
@@ -42,6 +53,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoUpdateUserPinEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eUpdateUserPinEndpoint;
+    }
     return kTestUpdateUserPinEndpoint;
   }
 
@@ -51,6 +65,9 @@ class EndpointContext {
     }
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoVerifyPhoneEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eVerifyPhoneEndpoint;
     }
     return kTestVerifyPhoneEndpoint;
   }
@@ -62,6 +79,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoCreateUserByPhoneEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eCreateUserByPhoneEndpoint;
+    }
     return kTestCreateUserByPhoneEndpoint;
   }
 
@@ -71,6 +91,9 @@ class EndpointContext {
     }
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoRetryResendOtpEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eRetryResendOtpEndpoint;
     }
     return kTestRetryResendOtpEndpoint;
   }
@@ -82,6 +105,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoRefreshTokenEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eRefreshTokenEndpoint;
+    }
     return kTestRefreshTokenEndpoint;
   }
 
@@ -91,6 +117,9 @@ class EndpointContext {
     }
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoAnonymousLoginEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eAnonymousLoginEndpoint;
     }
     return kTestAnonymousLoginEndpoint;
   }
@@ -102,6 +131,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoUserRecoveryPhoneNumbersEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eUserRecoveryPhoneNumbersEndpoint;
+    }
     return kTestUserRecoveryPhoneNumbersEndpoint;
   }
 
@@ -112,6 +144,9 @@ class EndpointContext {
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoSendRecoverAccountOtpEndpoint;
     }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eSendRecoverAccountOtpEndpoint;
+    }
     return kTestSendRecoverAccountOtpEndpoint;
   }
 
@@ -121,6 +156,9 @@ class EndpointContext {
     }
     if (contexts.contains(AppContext.AppDemo)) {
       return kDemoSetPrimaryPhoneNumberEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eSetPrimaryPhoneNumberEndpoint;
     }
     return kTestSetPrimaryPhoneNumberEndpoint;
   }
