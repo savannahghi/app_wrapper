@@ -6,7 +6,7 @@ import 'package:sil_app_wrapper/sil_app_wrapper_base.dart';
 import 'package:sil_graphql_client/graph_client.dart';
 
 typedef TraceLogType = void Function(
-    {required SILGraphQlClient client,
+    {required ISILGraphQlClient client,
     dynamic query,
     dynamic data,
     dynamic response,
@@ -15,7 +15,7 @@ typedef TraceLogType = void Function(
     required BuildContext context});
 
 typedef SimpleCallType = Future<Map<String, dynamic>> Function(
-    {required SILGraphQlClient graphClient,
+    {required ISILGraphQlClient graphClient,
     String queryString,
     dynamic variables,
     required BuildContext context});
