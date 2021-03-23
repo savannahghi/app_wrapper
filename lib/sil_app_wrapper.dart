@@ -29,7 +29,7 @@ class SILAppWrapper extends StatefulWidget {
   /// [graphQLClient] is the graphql client from sil_graphql_client package
   /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final SILGraphQlClient graphQLClient;
+  final ISILGraphQlClient graphQLClient;
 
   /// [context] is the environment which the app is running on. In app can run
   /// on multiple contexts, the intuition why [context] is a list.

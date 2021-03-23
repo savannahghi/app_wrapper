@@ -31,7 +31,7 @@ Map<String, dynamic> timeOutEvent = <String, dynamic>{
 };
 
 Future<Map<String, dynamic>> mockSuccessfulSimpleCallType({
-  required SILGraphQlClient graphClient,
+  required ISILGraphQlClient graphClient,
   String? queryString,
   required BuildContext context,
   dynamic variables,
@@ -39,7 +39,7 @@ Future<Map<String, dynamic>> mockSuccessfulSimpleCallType({
     successfulResponse;
 
 Future<Map<String, dynamic>> mockSimpleCallErrorType({
-  required SILGraphQlClient graphClient,
+  required ISILGraphQlClient graphClient,
   String? queryString,
   dynamic variables,
   required BuildContext context,
@@ -47,7 +47,7 @@ Future<Map<String, dynamic>> mockSimpleCallErrorType({
     errorResponse;
 
 Future<Map<String, dynamic>> mockSimpleCallTimeOut({
-  required SILGraphQlClient graphClient,
+  required ISILGraphQlClient graphClient,
   String? queryString,
   dynamic variables,
   required BuildContext context,
@@ -55,7 +55,7 @@ Future<Map<String, dynamic>> mockSimpleCallTimeOut({
     timeoutResponse;
 
 void mockTraceLogType({
-  required SILGraphQlClient client,
+  required ISILGraphQlClient client,
   dynamic query,
   dynamic data,
   dynamic response,
