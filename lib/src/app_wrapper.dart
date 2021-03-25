@@ -18,7 +18,7 @@ class SILAppWrapper extends StatefulWidget {
   /// [child] the widget that will be wrapped by this wrapper
   final Widget child;
 
-  /// [appName] the name os the app
+  /// [appName] the name of the app
   final String appName;
 
   /// Used to send events to the backend
