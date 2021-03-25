@@ -1,8 +1,7 @@
 import 'package:camera_platform_interface/src/types/camera_description.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:local_auth/local_auth.dart';
-import 'package:sil_app_wrapper/camera_wrapper.dart';
-import 'package:sil_app_wrapper/device_capabilities.dart';
+import 'package:sil_app_wrapper/sil_app_wrapper.dart';
 
 import 'mocks.dart';
 

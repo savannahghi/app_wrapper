@@ -1,5 +1,4 @@
-import 'package:sil_app_wrapper/constants/endpoints.dart';
-import 'package:sil_app_wrapper/models/enums/enums.dart';
+import 'package:sil_app_wrapper/sil_app_wrapper.dart';
 
 /// '[EndpointContext] returns the correct server endpoint depending on the context
 /// that the app is running on
