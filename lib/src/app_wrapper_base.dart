@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:sil_app_wrapper/device_capabilities.dart';
-import 'package:sil_app_wrapper/models/enums/enums.dart';
+import 'package:sil_app_wrapper/sil_app_wrapper.dart';
+
 import 'package:sil_graphql_client/graph_client.dart';
 
 class SILAppWrapperBase extends InheritedWidget {
