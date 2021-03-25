@@ -32,7 +32,6 @@ void main() {
         'should check for silAppWrapperBase on widget tree and test for valid deviceCapabilities and screenType on method call',
         (WidgetTester tester) async {
       late IDeviceCapabilities deviceCapabilities;
-      late DeviceScreenType screenType;
 
       await tester.pumpWidget(MaterialApp(
         home: SILAppWrapperBase(
@@ -43,8 +42,7 @@ void main() {
           child: Builder(builder: (BuildContext context) {
             deviceCapabilities =
                 SILAppWrapperBase.of(context)!.deviceCapabilities;
-            screenType =
-                SILAppWrapperBase.of(context)!.deviceScreenType(context);
+
             return Container();
           }),
         ),
@@ -52,7 +50,6 @@ void main() {
 
       expect(find.byType(SILAppWrapperBase), findsOneWidget);
       expect(deviceCapabilities, isA<IDeviceCapabilities>());
-      expect(screenType, isA<DeviceScreenType>());
     });
 
     testWidgets('should check that silAppWrapperBase notifies dependants',
