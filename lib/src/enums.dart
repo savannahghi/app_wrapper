@@ -1,5 +1,3 @@
-enum DeviceScreenType { Mobile, Tablet, Desktop }
-
 /// [AppContext] a finite enum of environments where savannah flutter apps
 /// run
 enum AppContext {

@@ -33,15 +33,4 @@ class SILAppWrapperBase extends InheritedWidget {
 
   static SILAppWrapperBase? of(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<SILAppWrapperBase>();
-
-  DeviceScreenType deviceScreenType(BuildContext context) {
-    final double deviceWidth = MediaQuery.of(context).size.width;
-    if (deviceWidth > 950) {
-      return DeviceScreenType.Desktop;
-    } else if (deviceWidth > 600) {
-      return DeviceScreenType.Tablet;
-    } else {
-      return DeviceScreenType.Mobile;
-    }
-  }
 }
