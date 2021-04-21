@@ -24,6 +24,8 @@ const String kProdSendRecoverAccountOtpEndpoint =
     'https://profile-prod.healthcloud.co.ke/send_otp';
 const String kProdSetPrimaryPhoneNumberEndpoint =
     'https://profile-prod.healthcloud.co.ke/set_primary_phonenumber';
+const String kProdUploadFileEndPoint =
+    'https://engagement-prod.healthcloud.co.ke/upload';
 
 /* TEST ENDPOINTS */
 const String kTestGraphqlEndpoint = 'https://graph-test.bewell.co.ke/graphql';
@@ -49,6 +51,8 @@ const String kTestSendRecoverAccountOtpEndpoint =
     'https://profile-testing.healthcloud.co.ke/send_otp';
 const String kTestSetPrimaryPhoneNumberEndpoint =
     'https://profile-testing.healthcloud.co.ke/set_primary_phonenumber';
+const String kTestUploadFileEndPoint =
+    'https://engagement-testing.healthcloud.co.ke/upload';
 
 /* DEMO ENDPOINTS */
 const String kDemoGraphqlEndpoint = 'https://graph-demo.bewell.co.ke/graphql';
@@ -74,6 +78,8 @@ const String kDemoSendRecoverAccountOtpEndpoint =
     'https://profile-demo.healthcloud.co.ke/send_otp';
 const String kDemoSetPrimaryPhoneNumberEndpoint =
     'https://profile-demo.healthcloud.co.ke/set_primary_phonenumber';
+const String kDemoUploadFileEndPoint =
+    'https://engagement-demo.healthcloud.co.ke/upload';
 
 /* E2E ENDPOINTS */
 const String ke2eGraphqlEndpoint = 'https://graph-e2e.bewell.co.ke/graphql';
@@ -99,3 +105,5 @@ const String ke2eSendRecoverAccountOtpEndpoint =
     'https://profile-e2e.healthcloud.co.ke/send_otp';
 const String ke2eSetPrimaryPhoneNumberEndpoint =
     'https://profile-e2e.healthcloud.co.ke/set_primary_phonenumber';
+const String ke2eUploadFileEndPoint =
+    'https://engagement-e2e.healthcloud.co.ke/upload';
