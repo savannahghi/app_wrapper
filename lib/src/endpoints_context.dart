@@ -32,6 +32,22 @@ class EndpointContext {
     return kTestLoginByPhoneEndpoint;
   }
 
+  static String uploadFileEndpoint(List<AppContext> contexts) {
+    if (contexts.contains(AppContext.AppProd)) {
+      return kProdUploadFileEndPoint;
+    }
+
+    if (contexts.contains(AppContext.AppDemo)) {
+      return kDemoUploadFileEndPoint;
+    }
+
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eUploadFileEndPoint;
+    }
+
+    return kTestUploadFileEndPoint;
+  }
+
   static String resetPinResetEndpoint(List<AppContext> contexts) {
     if (contexts.contains(AppContext.AppProd)) {
       return kProdPinResetEndpoint;

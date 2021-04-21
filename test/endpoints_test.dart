@@ -60,6 +60,9 @@ void main() {
 
       expect(EndpointContext.setPrimaryPhoneNumber(prodContext),
           kProdSetPrimaryPhoneNumberEndpoint);
+
+      expect(EndpointContext.uploadFileEndpoint(prodContext),
+          kProdUploadFileEndPoint);
     });
 
     test('demo endpoints', () {
@@ -98,6 +101,9 @@ void main() {
 
       expect(EndpointContext.setPrimaryPhoneNumber(demoContext),
           kDemoSetPrimaryPhoneNumberEndpoint);
+
+      expect(EndpointContext.uploadFileEndpoint(demoContext),
+          kDemoUploadFileEndPoint);
     });
 
     test('test endpoints', () {
@@ -136,6 +142,9 @@ void main() {
 
       expect(EndpointContext.setPrimaryPhoneNumber(testContext),
           kTestSetPrimaryPhoneNumberEndpoint);
+
+      expect(EndpointContext.uploadFileEndpoint(testContext),
+          kTestUploadFileEndPoint);
     });
 
     test('e2e endpoints', () {
@@ -174,6 +183,9 @@ void main() {
 
       expect(EndpointContext.setPrimaryPhoneNumber(e2eContext),
           ke2eSetPrimaryPhoneNumberEndpoint);
+
+      expect(EndpointContext.uploadFileEndpoint(e2eContext),
+          ke2eUploadFileEndPoint);
     });
   });
 }
