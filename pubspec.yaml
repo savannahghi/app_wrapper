@@ -13,7 +13,7 @@ dependencies:
   camera: ^0.8.1+2
   flutter:
     sdk: flutter
-  local_auth: ^1.1.0
+  local_auth: ^1.1.6
   sil_graphql_client:
     git:
       url: https://sil_dart_utils:xiFnpjLHssG76bpWxUb9@gitlab.slade360emr.com/optimalhealth/dart_utils/sil_graphql_client.git
