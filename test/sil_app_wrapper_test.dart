@@ -52,7 +52,7 @@ void main() {
       expect(deviceCapabilities, isA<IDeviceCapabilities>());
     });
 
-    testWidgets('should check that silAppWrapperBase notifies dependants',
+    testWidgets('should check that silAppWrapperBase notifies dependant',
         (WidgetTester tester) async {
       final List<SILAppWrapperBase> log = <SILAppWrapperBase>[];
 
