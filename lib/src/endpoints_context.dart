@@ -1,4 +1,4 @@
-import 'package:sil_app_wrapper/sil_app_wrapper.dart';
+import 'package:app_wrapper/sil_app_wrapper.dart';
 
 /// '[EndpointContext] returns the correct server endpoint depending on the context
 /// that the app is running on

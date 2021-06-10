@@ -2,7 +2,7 @@ library sil_app_wrapper;
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sil_app_wrapper/sil_app_wrapper.dart';
+import 'package:app_wrapper/sil_app_wrapper.dart';
 
 import 'package:sil_graphql_client/graph_client.dart';
 
