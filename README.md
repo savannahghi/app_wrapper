@@ -1,4 +1,4 @@
-# sil_app_wrapper
+# app_wrapper
 
 `sil_app_wrapper` is an open source project &mdash; it's one among many other shared libraries that make up the wider ecosystem of software made and open sourced by `Savannah Informatics Limited`.
 

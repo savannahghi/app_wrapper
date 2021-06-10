@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sil_app_wrapper/sil_app_wrapper.dart';
+import 'package:app_wrapper/sil_app_wrapper.dart';
 
 import 'package:sil_graphql_client/graph_client.dart';
 

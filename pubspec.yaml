@@ -1,8 +1,7 @@
-name: sil_app_wrapper
+name: app_wrapper
 description: Wrapper entry point the provides app wide dependencies
-version: 0.0.1
-author: dmwangi@savannahinformatics.com
-homepage: https://gitlab.slade360emr.com/optimalhealth/sil_dart_utils
+version: 0.1.1
+homepage: https://github.com/savannahghi/app_wrapper
 publish_to: none
 
 environment:
