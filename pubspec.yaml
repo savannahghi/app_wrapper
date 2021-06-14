@@ -2,6 +2,9 @@ name: app_wrapper
 description: Wrapper entry point the provides app wide dependencies
 version: 0.1.1
 homepage: https://github.com/savannahghi/app_wrapper
+repository: https://github.com/savannahghi/app_wrapper
+issue_tracker: https://github.com/savannahghi/app_wrapper/issues
+documentation: https://github.com/savannahghi/app_wrapper/blob/main/doc/readme.md
 publish_to: none
 
 environment:
@@ -9,7 +12,7 @@ environment:
   flutter: ">=2.0.0"
 
 dependencies:
-  camera: ^0.8.1+2
+  camera: ^0.8.1+3
   flutter:
     sdk: flutter
   local_auth: ^1.1.6
