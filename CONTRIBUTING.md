@@ -52,16 +52,16 @@ When you initially consider contributing to `sil_app_wrapper`, you might be unsu
 
 Here's a list of the big ones:
 
-- [dart_utils/sil_app_wrapper](https://github.com/) -  A shared library for `BeWell-Consumer` and `BeWell-Professional` Responsible for putting together everything that the app needs in order to run safely. Similar to a pre-flight checklist that brings together app requirements and exposes them to app's element tree.
-- [dart_utils/sil_core_domain_objects](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` Responsible for aggregating core domain objects.
-- [dart_utils/sil_fcm](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for exposing firebase messaging services.
-- [dart_utils/sil_feed](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for rendering and refreshing user-feed and engagement data.
-- [dart_utils/sil_graphql_client](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for exposing graphql_client and helper methods for use in the various apps
-- [dart_utils/sil_logger](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for displaying various logging options used for development and debugging
-- [dart_utils/sil_misc](https://github.com/) -A shared library for `BeWell-Consumer` and `BeWell-Professional` that is a wrapper for various shared helper methods and functions
-- [dart_utils/sil_themes](https://github.com/) -A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for defining and providing theme/style guidelines
-- [dart_utils/sil_ui_components](https://github.com/) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for rendering and exposing dumb widgets and ui components 
-- [dart_utils/sil_user_profile](https://github.com/) - `sil_user_profile`is a shared library between [BeWell-Consumer] and [BeWell-Professional] and is responsible for the user profile displayed on both apps.
+- [app_wrapper](https://github.com/savannahghi/app_wrapper) -  A shared library for `BeWell-Consumer` and `BeWell-Professional` Responsible for putting together everything that the app needs in order to run safely. Similar to a pre-flight checklist that brings together app requirements and exposes them to app's element tree.
+- [domain_objects](https://github.com/savannahghi/domain_objects) - A shared library for `BeWell-Consumer` and `BeWell-Professional` Responsible for aggregating core domain objects.
+- [dart_fcm](https://github.com/savannahghi/dart_fcm) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for exposing firebase messaging services.
+- [user_feed](https://github.com/savannahghi/user_feed) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for rendering and refreshing user-feed and engagement data.
+- [flutter_graphql_client](https://github.com/savannahghi/flutter_graphql_client) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for exposing graphql_client and helper methods for use in the various apps
+- [debug_logger](https://github.com/savannahghi/debug_logger) - A shared library that is responsible for displaying various logging options used for development and debugging
+- [misc_utilities](https://github.com/savannahghi/misc_utilities) -A shared library for `BeWell-Consumer` and `BeWell-Professional` that is a wrapper for various shared helper methods and functions
+- [shared_themes](https://github.com/savannahghi/shared_themes) -A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for defining and providing theme/style guidelines
+- [shared_ui_components](https://github.com/savannahghi/shared_ui_components) - A shared library for `BeWell-Consumer` and `BeWell-Professional` that is responsible for rendering and exposing dumb widgets and ui components 
+- [user_profile](https://github.com/savannahghi/user_profile) - `sil_user_profile`is a shared library between [BeWell-Consumer] and [BeWell-Professional] and is responsible for the user profile displayed on both apps.
 
 ### Design Decisions
 
