@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
-import 'package:app_wrapper/sil_app_wrapper.dart';
+import 'package:app_wrapper/app_wrapper.dart';
 
-import 'package:sil_graphql_client/graph_client.dart';
+import 'package:flutter_graphql_client/graph_client.dart';
 
 class SILAppWrapperBase extends InheritedWidget {
   const SILAppWrapperBase({
