@@ -1,6 +1,6 @@
 name: app_wrapper
-description: Wrapper entry point the provides app wide dependencies
-version: 0.1.1
+description: A wrapper that is responsible for initializing various services and utilities needed to run apps safely.
+version: 0.1.20
 homepage: https://github.com/savannahghi/app_wrapper
 repository: https://github.com/savannahghi/app_wrapper
 issue_tracker: https://github.com/savannahghi/app_wrapper/issues
@@ -11,10 +11,10 @@ environment:
   flutter: ">=2.0.0"
 
 dependencies:
-  camera: ^0.8.1+3
+  camera: ^0.8.1+4
   flutter:
     sdk: flutter
-  flutter_graphql_client: ^0.1.1
+  flutter_graphql_client: ^0.1.20
   local_auth: ^1.1.6
 
 dev_dependencies:

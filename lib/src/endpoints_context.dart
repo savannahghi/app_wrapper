@@ -1,6 +1,6 @@
 import 'package:app_wrapper/app_wrapper.dart';
 
-/// '[EndpointContext] returns the correct server endpoint depending on the context
+/// [EndpointContext] returns the correct server endpoint depending on the context
 /// that the app is running on
 class EndpointContext {
   static String getGraphQLEndpoint(List<AppContext> contexts) {
