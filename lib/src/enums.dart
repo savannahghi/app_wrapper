@@ -1,5 +1,4 @@
-/// [AppContext] a finite enum of environments where savannah flutter apps
-/// run
+/// [AppContext] a finite enum of environments where savannah mobile apps run
 enum AppContext {
   /// [BewellCONSUMER] savannah bewell consumer
   BewellCONSUMER,

@@ -1,55 +1,39 @@
+import 'package:app_wrapper/app_wrapper.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_graphql_client/graph_client.dart';
 
 void main() {
-  runApp(const AppWrapperExample());
+  runApp(const YourAppName(
+    appContexts: <AppContext>[],
+  ));
 }
 
-class AppWrapperExample extends StatefulWidget {
-  /// This widget is the root of your application.
-  const AppWrapperExample({Key? key}) : super(key: key);
+/// [YourAppName] marks as the entry point to your application.
+/// 
+/// Wraps your app with [AppWrapper] class.
+/// 
+/// Takes in a list of appContexts (e.g `testAppContexts`, `demoAppContexts` or `prodAppContexts`)
+/// [context] is the environment which the app is running on.
+/// This can be different app `flavours` or environments (`prod`, `test`, `demo`)
+class YourAppName extends StatelessWidget {
+  const YourAppName({Key? key, required this.appContexts}) : super(key: key);
 
-  @override
-  _AppWrapperExampleState createState() => _AppWrapperExampleState();
-}
-
-class _AppWrapperExampleState extends State<AppWrapperExample> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      /// This call to setState tells the Flutter framework that something has
-      /// changed in this State, which causes it to rerun the build method below
-      /// so that the display can reflect the updated values. If we changed
-      /// _counter without calling setState(), then the build method would not be
-      /// called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  final List<AppContext> appContexts;
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Debug Logger example'),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
+    return AppWrapper(
+      appName: 'appName',
+      graphQLClient: SILGraphQlClient(
+          'id_token', EndpointContext.getGraphQLEndpoint(appContexts)),
+      appContexts: appContexts,
+      child: Builder(
+        builder: (BuildContext context) {
+          return const MaterialApp(
+
+              /// Entry point to your application
+              );
+        },
       ),
     );
   }

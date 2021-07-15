@@ -9,60 +9,59 @@ import 'mocks.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  final SILGraphQlClient graphClient =
-      SILGraphQlClient(token: 'token', url: 'url');
+  final SILGraphQlClient graphClient = SILGraphQlClient('token', 'url');
 
   final List<AppContext> appContexts = <AppContext>[AppContext.AppTest];
 
-  testWidgets('should test silAppWrapper', (WidgetTester tester) async {
-    await tester.pumpWidget(MaterialApp(
-        home: SILAppWrapper(
-      appName: 'test',
-      graphQLClient: graphClient,
-      appContexts: appContexts,
-      child: Container(),
-    )));
+  testWidgets('should test AppWrapper', (WidgetTester tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+          home: AppWrapper(
+        appName: 'test',
+        graphQLClient: graphClient,
+        appContexts: appContexts,
+        child: Container(),
+      )),
+    );
 
     final Finder silAppWrapperKey = find.byKey(const Key('sil_app_wrapper'));
     expect(silAppWrapperKey, findsOneWidget);
   });
 
-  group('silAppWrapperBase', () {
+  group('AppWrapperBase', () {
     testWidgets(
-        'should check for silAppWrapperBase on widget tree and test for valid deviceCapabilities and screenType on method call',
+        'should check for AppWrapperBase on widget tree and test for valid deviceCapabilities',
         (WidgetTester tester) async {
       late IDeviceCapabilities deviceCapabilities;
 
       await tester.pumpWidget(MaterialApp(
-        home: SILAppWrapperBase(
+        home: AppWrapperBase(
           appName: 'test',
           graphQLClient: graphClient,
           appContexts: appContexts,
           deviceCapabilities: MockDeviceCapabilities(),
           child: Builder(builder: (BuildContext context) {
-            deviceCapabilities =
-                SILAppWrapperBase.of(context)!.deviceCapabilities;
+            deviceCapabilities = AppWrapperBase.of(context)!.deviceCapabilities;
 
             return Container();
           }),
         ),
       ));
 
-      expect(find.byType(SILAppWrapperBase), findsOneWidget);
+      expect(find.byType(AppWrapperBase), findsOneWidget);
       expect(deviceCapabilities, isA<IDeviceCapabilities>());
     });
 
-    testWidgets('should check that silAppWrapperBase notifies dependant',
+    testWidgets('should check that AppWrapperBase notifies dependant',
         (WidgetTester tester) async {
-      final List<SILAppWrapperBase> log = <SILAppWrapperBase>[];
+      final List<AppWrapperBase> log = <AppWrapperBase>[];
 
       final Builder builder = Builder(builder: (BuildContext context) {
-        log.add(
-            context.dependOnInheritedWidgetOfExactType<SILAppWrapperBase>()!);
+        log.add(context.dependOnInheritedWidgetOfExactType<AppWrapperBase>()!);
         return Container();
       });
 
-      final SILAppWrapperBase first = SILAppWrapperBase(
+      final AppWrapperBase first = AppWrapperBase(
         appName: 'test',
         graphQLClient: graphClient,
         appContexts: appContexts,
@@ -72,7 +71,7 @@ void main() {
       );
       await tester.pumpWidget(first);
 
-      final SILAppWrapperBase second = SILAppWrapperBase(
+      final AppWrapperBase second = AppWrapperBase(
         appName: 'test',
         graphQLClient: graphClient,
         appContexts: appContexts,
@@ -82,9 +81,9 @@ void main() {
       );
       await tester.pumpWidget(second);
 
-      expect(log, equals(<SILAppWrapperBase>[first]));
+      expect(log, equals(<AppWrapperBase>[first]));
 
-      final SILAppWrapperBase third = SILAppWrapperBase(
+      final AppWrapperBase third = AppWrapperBase(
         appName: 'test',
         graphQLClient: graphClient,
         appContexts: appContexts,
@@ -93,7 +92,7 @@ void main() {
       );
       await tester.pumpWidget(third);
 
-      expect(log, equals(<SILAppWrapperBase>[first, third]));
+      expect(log, equals(<AppWrapperBase>[first, third]));
     });
   });
 }

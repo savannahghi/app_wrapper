@@ -1,3 +1,6 @@
+## 0.1.20
+
+- Package fixes
 ## 0.1.1
 
 - Update dependencies (sil_graphql_client)

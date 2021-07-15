@@ -20,8 +20,8 @@ abstract class IDeviceCapabilities with DeviceCapability {
     return availableBiometrics;
   }
 
-// check if cameras are available in the device. if no cameras
-// are available then the microphone is not available and vice versa
+  // check if cameras are available in the device. if no cameras
+  // are available then the microphone is not available and vice versa
   @override
   Future<bool> checkCameras<T extends ICamera>(T wrapper) async {
     final List<CameraDescription> cameras =
