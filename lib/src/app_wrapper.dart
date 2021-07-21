@@ -6,7 +6,7 @@ import 'package:app_wrapper/app_wrapper.dart';
 import 'package:flutter_graphql_client/graph_client.dart';
 
 /// [AppWrapper] Is a top level Class used to wrap your application.
-/// 
+///
 /// @params
 /// - `child` the widget that will be wrapped by this wrapper
 /// - `appName` A required string that identifies your application
@@ -34,7 +34,7 @@ class AppWrapper extends StatefulWidget {
   /// [graphQLClient] is the graphql client from flutter_graphql_client package
   /// it is dynamic to avoid cyclic-dependency errors when packages
   /// cross depend on each other
-  final ISILGraphQlClient graphQLClient;
+  final IGraphQlClient graphQLClient;
 
   /// [context] is the environment which the app is running on. In app can run
   /// on multiple contexts, the intuition why [context] is a list.

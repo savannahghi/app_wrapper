@@ -1,3 +1,7 @@
+## 0.1.21
+
+- chore: update graphql client
+
 ## 0.1.20
 
 - Package fixes
