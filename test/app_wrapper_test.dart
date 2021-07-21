@@ -9,7 +9,7 @@ import 'mocks.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  final SILGraphQlClient graphClient = SILGraphQlClient('token', 'url');
+  final GraphQlClient graphClient = GraphQlClient('token', 'url');
 
   final List<AppContext> appContexts = <AppContext>[AppContext.AppTest];
 

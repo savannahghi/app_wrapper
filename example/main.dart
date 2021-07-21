@@ -9,9 +9,9 @@ void main() {
 }
 
 /// [YourAppName] marks as the entry point to your application.
-/// 
+///
 /// Wraps your app with [AppWrapper] class.
-/// 
+///
 /// Takes in a list of appContexts (e.g `testAppContexts`, `demoAppContexts` or `prodAppContexts`)
 /// [context] is the environment which the app is running on.
 /// This can be different app `flavours` or environments (`prod`, `test`, `demo`)
@@ -24,7 +24,7 @@ class YourAppName extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppWrapper(
       appName: 'appName',
-      graphQLClient: SILGraphQlClient(
+      graphQLClient: GraphQlClient(
           'id_token', EndpointContext.getGraphQLEndpoint(appContexts)),
       appContexts: appContexts,
       child: Builder(
@@ -38,4 +38,3 @@ class YourAppName extends StatelessWidget {
     );
   }
 }
-
