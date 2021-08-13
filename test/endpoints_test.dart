@@ -63,6 +63,9 @@ void main() {
 
       expect(EndpointContext.uploadFileEndpoint(prodContext),
           kProdUploadFileEndPoint);
+
+      expect(EndpointContext.sendContactVerificationOTP(prodContext),
+          kProdSendContactVerificationOTPEndpoint);
     });
 
     test('demo endpoints', () {
@@ -104,6 +107,9 @@ void main() {
 
       expect(EndpointContext.uploadFileEndpoint(demoContext),
           kDemoUploadFileEndPoint);
+
+      expect(EndpointContext.sendContactVerificationOTP(demoContext),
+          kDemoSendContactVerificationOTPEndpoint);
     });
 
     test('test endpoints', () {
@@ -145,6 +151,9 @@ void main() {
 
       expect(EndpointContext.uploadFileEndpoint(testContext),
           kTestUploadFileEndPoint);
+
+      expect(EndpointContext.sendContactVerificationOTP(testContext),
+          kTestSendContactVerificationOTPEndpoint);
     });
 
     test('e2e endpoints', () {

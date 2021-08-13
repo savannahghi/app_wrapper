@@ -177,4 +177,14 @@ class EndpointContext {
     }
     return kTestSetPrimaryPhoneNumberEndpoint;
   }
+
+  static String sendContactVerificationOTP(List<AppContext> contexts) {
+    if (contexts.contains(AppContext.AppProd)) {
+      return kProdSendContactVerificationOTPEndpoint;
+    }
+    if (contexts.contains(AppContext.AppDemo)) {
+      return kDemoSendContactVerificationOTPEndpoint;
+    }
+    return kTestSendContactVerificationOTPEndpoint;
+  }
 }
