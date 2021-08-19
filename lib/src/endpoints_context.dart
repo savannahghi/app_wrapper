@@ -187,4 +187,14 @@ class EndpointContext {
     }
     return kTestSendContactVerificationOTPEndpoint;
   }
+
+  static String verifyContactOTP(List<AppContext> contexts) {
+    if (contexts.contains(AppContext.AppProd)) {
+      return kProdVerifyContactOTPEndpoint;
+    }
+    if (contexts.contains(AppContext.AppDemo)) {
+      return kDemoVerifyContactOTPEndpoint;
+    }
+    return kTestVerifyContactOTPEndpoint;
+  }
 }

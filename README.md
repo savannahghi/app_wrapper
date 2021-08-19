@@ -23,7 +23,7 @@ This will add a line like this to your package's pubspec.yaml (and run an implic
 
 ```dart
 dependencies:
-  app_wrapper: ^0.1.22
+  app_wrapper: ^0.1.23
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.

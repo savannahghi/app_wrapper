@@ -66,6 +66,9 @@ void main() {
 
       expect(EndpointContext.sendContactVerificationOTP(prodContext),
           kProdSendContactVerificationOTPEndpoint);
+
+      expect(EndpointContext.verifyContactOTP(prodContext),
+          kProdVerifyContactOTPEndpoint);
     });
 
     test('demo endpoints', () {
@@ -110,6 +113,9 @@ void main() {
 
       expect(EndpointContext.sendContactVerificationOTP(demoContext),
           kDemoSendContactVerificationOTPEndpoint);
+
+      expect(EndpointContext.verifyContactOTP(demoContext),
+          kDemoVerifyContactOTPEndpoint);
     });
 
     test('test endpoints', () {
@@ -154,6 +160,9 @@ void main() {
 
       expect(EndpointContext.sendContactVerificationOTP(testContext),
           kTestSendContactVerificationOTPEndpoint);
+
+      expect(EndpointContext.verifyContactOTP(testContext),
+          kTestVerifyContactOTPEndpoint);
     });
 
     test('e2e endpoints', () {
