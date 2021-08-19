@@ -1,3 +1,7 @@
+## 0.1.23
+
+- feat: add new endpoints
+
 ## 0.1.22
 
 - feat: add new contact verification endpoints
