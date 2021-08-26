@@ -6,6 +6,9 @@ enum AppContext {
   /// [BewellPRO] savannah bewell professional
   BewellPRO,
 
+  /// [AfyaMoja] Open sourced AfyaMoja
+  AfyaMoja,
+
   /// [AppTest] app running on test environment. This indicates that the will call a specific
   /// endpoint specifically for testing
   AppTest,
