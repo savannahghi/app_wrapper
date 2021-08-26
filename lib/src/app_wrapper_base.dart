@@ -2,6 +2,8 @@ import 'package:flutter/widgets.dart';
 import 'package:app_wrapper/app_wrapper.dart';
 import 'package:flutter_graphql_client/graph_client.dart';
 
+import 'base_context.dart';
+
 /// [AppWrapperBase] is a top level base class used to efficiently propagate information down the tree.
 ///
 /// It extends [InheritedWidget] and provides consumers with additional data about the device the apps are running on.
@@ -26,6 +28,7 @@ class AppWrapperBase extends InheritedWidget {
     required this.appContexts,
     required this.deviceCapabilities,
     this.eventBus,
+    this.customContext,
     this.shouldNotify = true,
   }) : super(child: child);
 
@@ -42,6 +45,8 @@ class AppWrapperBase extends InheritedWidget {
 
   /// [context] is the app running environments
   final List<AppContext> appContexts;
+
+  final BaseContext? customContext;
 
   @override
   bool updateShouldNotify(InheritedWidget oldWidget) => shouldNotify;

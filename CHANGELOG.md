@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.25
+
+- Ability to pass custom endpoints to app wrapper
+
 ## 0.1.24
 
 - New app context for the open-sourced AfyaMoja app

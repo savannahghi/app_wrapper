@@ -1,5 +1,6 @@
 library app_wrapper;
 
+import 'package:app_wrapper/src/base_context.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:app_wrapper/app_wrapper.dart';
@@ -10,7 +11,8 @@ import 'package:flutter_graphql_client/graph_client.dart';
 /// @params
 /// - `child` the widget that will be wrapped by this wrapper
 /// - `appName` A required string that identifies your application
-/// - `graphQLClient` An instance of [ISILGraphQlClient] which is the blueprint of a valid GraphQL client.
+/// - `graphQLClient` An instance of [IGraphQlClient] which is the '
+/// 'blueprint of a valid GraphQL client.
 /// - `appContexts` [context] app running environments.
 /// - `eventBus` Used to log events
 class AppWrapper extends StatefulWidget {
@@ -20,6 +22,7 @@ class AppWrapper extends StatefulWidget {
     required this.graphQLClient,
     required this.appContexts,
     this.eventBus,
+    this.baseContext,
   });
 
   /// [child] the widget that will be wrapped by this wrapper
@@ -45,6 +48,8 @@ class AppWrapper extends StatefulWidget {
   ///
   /// An app should have at least one context
   final List<AppContext> appContexts;
+
+  final BaseContext? baseContext;
 
   @override
   AppWrapperState createState() => AppWrapperState();
@@ -72,6 +77,7 @@ class AppWrapperState extends State<AppWrapper> {
           graphQLClient: widget.graphQLClient,
           appContexts: widget.appContexts,
           deviceCapabilities: DeviceCapabilities(),
+          customContext: widget.baseContext,
           child: widget.child,
         );
       },
