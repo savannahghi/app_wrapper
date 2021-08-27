@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.26
+
+- expose base context file
+
 ## 0.1.25
 
 - Ability to pass custom endpoints to app wrapper
