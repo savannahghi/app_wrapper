@@ -1,21 +1,21 @@
 class BaseContext {
-  const BaseContext({
-    required this.graphqlEndpoint,
-    required this.loginByPhoneEndpoint,
-    required this.uploadFileEndPoint,
-    required this.pinResetEndpoint,
-    required this.updateUserPinEndpoint,
-    required this.verifyPhoneEndpoint,
-    required this.createUserByPhoneEndpoint,
-    required this.retryResendOtpEndpoint,
-    required this.refreshTokenEndpoint,
-    required this.anonymousLoginEndpoint,
-    required this.userRecoveryPhoneNumbersEndpoint,
-    required this.sendRecoverAccountOtpEndpoint,
-    required this.setPrimaryPhoneNumberEndpoint,
-    required this.sendContactVerificationOTPEndpoint,
-    required this.verifyContactOTPEndpoint,
-  });
+  const BaseContext(
+      {required this.graphqlEndpoint,
+      required this.loginByPhoneEndpoint,
+      required this.uploadFileEndPoint,
+      required this.pinResetEndpoint,
+      required this.updateUserPinEndpoint,
+      required this.verifyPhoneEndpoint,
+      required this.createUserByPhoneEndpoint,
+      required this.retryResendOtpEndpoint,
+      required this.refreshTokenEndpoint,
+      required this.anonymousLoginEndpoint,
+      required this.userRecoveryPhoneNumbersEndpoint,
+      required this.sendRecoverAccountOtpEndpoint,
+      required this.setPrimaryPhoneNumberEndpoint,
+      required this.sendContactVerificationOTPEndpoint,
+      required this.verifyContactOTPEndpoint,
+      required this.switchFlaggedFeaturesEndpoint});
 
   final String graphqlEndpoint;
   final String loginByPhoneEndpoint;
@@ -32,4 +32,5 @@ class BaseContext {
   final String setPrimaryPhoneNumberEndpoint;
   final String sendContactVerificationOTPEndpoint;
   final String verifyContactOTPEndpoint;
+  final String switchFlaggedFeaturesEndpoint;
 }

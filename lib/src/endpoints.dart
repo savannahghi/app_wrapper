@@ -24,6 +24,8 @@ const String kProdSendRecoverAccountOtpEndpoint =
     'https://profile-prod.healthcloud.co.ke/send_otp';
 const String kProdSetPrimaryPhoneNumberEndpoint =
     'https://profile-prod.healthcloud.co.ke/set_primary_phonenumber';
+const String kProdSwitchFlaggedFeaturesEndpoint =
+    'https://profile-prod.healthcloud.co.ke/switch_flagged_features';
 const String kProdUploadFileEndPoint =
     'https://engagement-prod.healthcloud.co.ke/upload';
 const String kProdSendContactVerificationOTPEndpoint =
@@ -55,6 +57,8 @@ const String kTestSendRecoverAccountOtpEndpoint =
     'https://profile-testing.healthcloud.co.ke/send_otp';
 const String kTestSetPrimaryPhoneNumberEndpoint =
     'https://profile-testing.healthcloud.co.ke/set_primary_phonenumber';
+const String kTestSwitchFlaggedFeaturesEndpoint =
+    'https://profile-testing.healthcloud.co.ke/switch_flagged_features';
 const String kTestUploadFileEndPoint =
     'https://engagement-testing.healthcloud.co.ke/upload';
 const String kTestSendContactVerificationOTPEndpoint =
@@ -86,6 +90,8 @@ const String kDemoSendRecoverAccountOtpEndpoint =
     'https://profile-demo.healthcloud.co.ke/send_otp';
 const String kDemoSetPrimaryPhoneNumberEndpoint =
     'https://profile-demo.healthcloud.co.ke/set_primary_phonenumber';
+const String kDemoSwitchFlaggedFeaturesEndpoint =
+    'https://profile-demo.healthcloud.co.ke/switch_flagged_features';
 const String kDemoUploadFileEndPoint =
     'https://engagement-demo.healthcloud.co.ke/upload';
 const String kDemoSendContactVerificationOTPEndpoint =
@@ -117,5 +123,7 @@ const String ke2eSendRecoverAccountOtpEndpoint =
     'https://profile-e2e.healthcloud.co.ke/send_otp';
 const String ke2eSetPrimaryPhoneNumberEndpoint =
     'https://profile-e2e.healthcloud.co.ke/set_primary_phonenumber';
+const String ke2eSwitchFlaggedFeaturesEndpoint =
+    'https://profile-e2e.healthcloud.co.ke/switch_flagged_features';
 const String ke2eUploadFileEndPoint =
     'https://engagement-e2e.healthcloud.co.ke/upload';

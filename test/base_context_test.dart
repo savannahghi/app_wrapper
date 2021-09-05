@@ -21,6 +21,7 @@ void main() {
         sendContactVerificationOTPEndpoint:
             'sendContactVerificationOTPEndpoint',
         verifyContactOTPEndpoint: 'verifyContactOTPEndpoint',
+        switchFlaggedFeaturesEndpoint: 'switchFlaggedFeaturesEndpoint',
       );
 
       expect(baseContext.graphqlEndpoint, 'graphqlEndpoint');

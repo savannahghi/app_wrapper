@@ -69,6 +69,9 @@ void main() {
 
       expect(EndpointContext.verifyContactOTP(prodContext),
           kProdVerifyContactOTPEndpoint);
+
+      expect(EndpointContext.switchFlaggedFeaturesEndpoint(prodContext),
+          kProdSwitchFlaggedFeaturesEndpoint);
     });
 
     test('demo endpoints', () {
@@ -116,6 +119,9 @@ void main() {
 
       expect(EndpointContext.verifyContactOTP(demoContext),
           kDemoVerifyContactOTPEndpoint);
+
+      expect(EndpointContext.switchFlaggedFeaturesEndpoint(demoContext),
+          kDemoSwitchFlaggedFeaturesEndpoint);
     });
 
     test('test endpoints', () {
@@ -163,6 +169,9 @@ void main() {
 
       expect(EndpointContext.verifyContactOTP(testContext),
           kTestVerifyContactOTPEndpoint);
+
+      expect(EndpointContext.switchFlaggedFeaturesEndpoint(testContext),
+          kTestSwitchFlaggedFeaturesEndpoint);
     });
 
     test('e2e endpoints', () {
@@ -204,6 +213,9 @@ void main() {
 
       expect(EndpointContext.uploadFileEndpoint(e2eContext),
           ke2eUploadFileEndPoint);
+
+      expect(EndpointContext.switchFlaggedFeaturesEndpoint(e2eContext),
+          ke2eSwitchFlaggedFeaturesEndpoint);
     });
   });
 }
