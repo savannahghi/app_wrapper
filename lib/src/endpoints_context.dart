@@ -197,4 +197,20 @@ class EndpointContext {
     }
     return kTestVerifyContactOTPEndpoint;
   }
+
+  static String switchFlaggedFeaturesEndpoint(List<AppContext> contexts) {
+    if (contexts.contains(AppContext.AppProd)) {
+      return kProdSwitchFlaggedFeaturesEndpoint;
+    }
+
+    if (contexts.contains(AppContext.AppDemo)) {
+      return kDemoSwitchFlaggedFeaturesEndpoint;
+    }
+
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eSwitchFlaggedFeaturesEndpoint;
+    }
+
+    return kTestSwitchFlaggedFeaturesEndpoint;
+  }
 }

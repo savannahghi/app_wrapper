@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.27
+
+- feat: switch flagged features
+
 ## 0.1.26
 
 - expose base context file
