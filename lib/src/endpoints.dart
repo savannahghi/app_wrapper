@@ -28,10 +28,6 @@ const String kProdSwitchFlaggedFeaturesEndpoint =
     'https://profile-prod.healthcloud.co.ke/switch_flagged_features';
 const String kProdUploadFileEndPoint =
     'https://engagement-prod.healthcloud.co.ke/upload';
-const String kProdSendContactVerificationOTPEndpoint =
-    'https://edi-prod.healthcloud.co.ke/send_otp';
-const String kProdVerifyContactOTPEndpoint =
-    'https://edi-prod.healthcloud.co.ke/verify_otp';
 
 /* TEST ENDPOINTS */
 const String kTestGraphqlEndpoint = 'https://graph-test.bewell.co.ke/graphql';
@@ -61,10 +57,6 @@ const String kTestSwitchFlaggedFeaturesEndpoint =
     'https://profile-testing.healthcloud.co.ke/switch_flagged_features';
 const String kTestUploadFileEndPoint =
     'https://engagement-testing.healthcloud.co.ke/upload';
-const String kTestSendContactVerificationOTPEndpoint =
-    'https://edi-testing.healthcloud.co.ke/send_otp';
-const String kTestVerifyContactOTPEndpoint =
-    'https://edi-testing.healthcloud.co.ke/verify_otp';
 
 /* DEMO ENDPOINTS */
 const String kDemoGraphqlEndpoint = 'https://graph-demo.bewell.co.ke/graphql';
@@ -94,10 +86,6 @@ const String kDemoSwitchFlaggedFeaturesEndpoint =
     'https://profile-demo.healthcloud.co.ke/switch_flagged_features';
 const String kDemoUploadFileEndPoint =
     'https://engagement-demo.healthcloud.co.ke/upload';
-const String kDemoSendContactVerificationOTPEndpoint =
-    'https://edi-staging.healthcloud.co.ke/send_otp';
-const String kDemoVerifyContactOTPEndpoint =
-    'https://edi-staging.healthcloud.co.ke/verify_otp';
 
 /* E2E ENDPOINTS */
 const String ke2eGraphqlEndpoint = 'https://graph-e2e.bewell.co.ke/graphql';
