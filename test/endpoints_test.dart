@@ -64,12 +64,6 @@ void main() {
       expect(EndpointContext.uploadFileEndpoint(prodContext),
           kProdUploadFileEndPoint);
 
-      expect(EndpointContext.sendContactVerificationOTP(prodContext),
-          kProdSendContactVerificationOTPEndpoint);
-
-      expect(EndpointContext.verifyContactOTP(prodContext),
-          kProdVerifyContactOTPEndpoint);
-
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(prodContext),
           kProdSwitchFlaggedFeaturesEndpoint);
     });
@@ -114,12 +108,6 @@ void main() {
       expect(EndpointContext.uploadFileEndpoint(demoContext),
           kDemoUploadFileEndPoint);
 
-      expect(EndpointContext.sendContactVerificationOTP(demoContext),
-          kDemoSendContactVerificationOTPEndpoint);
-
-      expect(EndpointContext.verifyContactOTP(demoContext),
-          kDemoVerifyContactOTPEndpoint);
-
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(demoContext),
           kDemoSwitchFlaggedFeaturesEndpoint);
     });
@@ -163,12 +151,6 @@ void main() {
 
       expect(EndpointContext.uploadFileEndpoint(testContext),
           kTestUploadFileEndPoint);
-
-      expect(EndpointContext.sendContactVerificationOTP(testContext),
-          kTestSendContactVerificationOTPEndpoint);
-
-      expect(EndpointContext.verifyContactOTP(testContext),
-          kTestVerifyContactOTPEndpoint);
 
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(testContext),
           kTestSwitchFlaggedFeaturesEndpoint);
