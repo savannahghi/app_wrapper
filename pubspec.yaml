@@ -1,6 +1,6 @@
 name: app_wrapper
 description: A wrapper that is responsible for initializing various services and utilities needed to run apps safely.
-version: 0.1.28
+version: 0.1.30
 homepage: https://github.com/savannahghi/app_wrapper
 repository: https://github.com/savannahghi/app_wrapper
 issue_tracker: https://github.com/savannahghi/app_wrapper/issues

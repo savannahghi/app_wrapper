@@ -1,8 +1,17 @@
 # CHANGELOG
 
+## 0.1.30
+
+- chore: complete automated deployment
+
+## 0.1.29
+
+- chore: setup automated deployment
+
 ## 0.1.28
 
 - chore: purge proprietary endpoints
+
 ## 0.1.27
 
 - feat: switch flagged features
