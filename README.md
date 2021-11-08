@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/badge/Version-^0.1.28-success.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/Version-^0.1.30-success.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
 # app_wrapper
@@ -19,11 +19,11 @@ Run this command:
 $ flutter pub add app_wrapper
 ```
 
-This will add a line like this to your package's pubspec.yaml (and run an implicit dart pub get):
+This will add a line like this to your package's `pubspec.yaml` (and run an implicit dart pub get):
 
 ```dart
 dependencies:
-  app_wrapper: ^0.1.28
+  app_wrapper: ^0.1.30
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.
