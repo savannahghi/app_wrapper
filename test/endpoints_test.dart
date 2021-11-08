@@ -66,6 +66,9 @@ void main() {
 
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(prodContext),
           kProdSwitchFlaggedFeaturesEndpoint);
+
+      expect(EndpointContext.transitionFromPaymentStatus(prodContext),
+          kProdTransitionFromPaymentStatusEndpoint);
     });
 
     test('demo endpoints', () {
@@ -110,6 +113,9 @@ void main() {
 
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(demoContext),
           kDemoSwitchFlaggedFeaturesEndpoint);
+
+      expect(EndpointContext.transitionFromPaymentStatus(demoContext),
+          kDemoTransitionFromPaymentStatusEndpoint);
     });
 
     test('test endpoints', () {
@@ -154,6 +160,9 @@ void main() {
 
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(testContext),
           kTestSwitchFlaggedFeaturesEndpoint);
+
+      expect(EndpointContext.transitionFromPaymentStatus(testContext),
+          kTestTransitionFromPaymentStatusEndpoint);
     });
 
     test('e2e endpoints', () {
@@ -198,6 +207,9 @@ void main() {
 
       expect(EndpointContext.switchFlaggedFeaturesEndpoint(e2eContext),
           ke2eSwitchFlaggedFeaturesEndpoint);
+
+      expect(EndpointContext.transitionFromPaymentStatus(e2eContext),
+          ke2eTransitionFromPaymentStatusEndpoint);
     });
   });
 }

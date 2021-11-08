@@ -28,6 +28,8 @@ const String kProdSwitchFlaggedFeaturesEndpoint =
     'https://profile-prod.healthcloud.co.ke/switch_flagged_features';
 const String kProdUploadFileEndPoint =
     'https://engagement-prod.healthcloud.co.ke/upload';
+const String kProdTransitionFromPaymentStatusEndpoint =
+    'https://discovery-prod.healthcloud.co.ke/testing/transition_from_payment';
 
 /* TEST ENDPOINTS */
 const String kTestGraphqlEndpoint = 'https://graph-test.bewell.co.ke/graphql';
@@ -57,6 +59,8 @@ const String kTestSwitchFlaggedFeaturesEndpoint =
     'https://profile-testing.healthcloud.co.ke/switch_flagged_features';
 const String kTestUploadFileEndPoint =
     'https://engagement-testing.healthcloud.co.ke/upload';
+const String kTestTransitionFromPaymentStatusEndpoint =
+    'https://discovery-testing.healthcloud.co.ke/testing/transition_from_payment';
 
 /* DEMO ENDPOINTS */
 const String kDemoGraphqlEndpoint = 'https://graph-demo.bewell.co.ke/graphql';
@@ -86,6 +90,8 @@ const String kDemoSwitchFlaggedFeaturesEndpoint =
     'https://profile-demo.healthcloud.co.ke/switch_flagged_features';
 const String kDemoUploadFileEndPoint =
     'https://engagement-demo.healthcloud.co.ke/upload';
+const String kDemoTransitionFromPaymentStatusEndpoint =
+    'https://discovery-demo.healthcloud.co.ke/testing/transition_from_payment';
 
 /* E2E ENDPOINTS */
 const String ke2eGraphqlEndpoint = 'https://graph-e2e.bewell.co.ke/graphql';
@@ -115,3 +121,5 @@ const String ke2eSwitchFlaggedFeaturesEndpoint =
     'https://profile-e2e.healthcloud.co.ke/switch_flagged_features';
 const String ke2eUploadFileEndPoint =
     'https://engagement-e2e.healthcloud.co.ke/upload';
+const String ke2eTransitionFromPaymentStatusEndpoint =
+    'https://discovery-e2e.healthcloud.co.ke/testing/transition_from_payment';

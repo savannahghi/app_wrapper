@@ -1,5 +1,9 @@
 # CHANGELOG
 
+
+## 0.1.31
+
+- chore: add transition from payment status endpoint
 ## 0.1.30
 
 - chore: complete automated deployment

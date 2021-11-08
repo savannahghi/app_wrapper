@@ -193,4 +193,17 @@ class EndpointContext {
 
     return kTestSwitchFlaggedFeaturesEndpoint;
   }
+
+  static String transitionFromPaymentStatus(List<AppContext> contexts) {
+    if (contexts.contains(AppContext.AppProd)) {
+      return kProdTransitionFromPaymentStatusEndpoint;
+    }
+    if (contexts.contains(AppContext.AppDemo)) {
+      return kDemoTransitionFromPaymentStatusEndpoint;
+    }
+    if (contexts.contains(AppContext.AppE2E)) {
+      return ke2eTransitionFromPaymentStatusEndpoint;
+    }
+    return kTestTransitionFromPaymentStatusEndpoint;
+  }
 }
