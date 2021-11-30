@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.31
+
+- chore: upgrade packages
+
 ## 0.1.30
 
 - chore: complete automated deployment
