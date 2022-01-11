@@ -9,6 +9,7 @@ void main() {
         loginByPhoneEndpoint: 'loginByPhoneEndpoint',
         uploadFileEndPoint: 'uploadFileEndPoint',
         pinResetEndpoint: 'pinResetEndpoint',
+        requestPinResetEndpoint: 'requestPinResetEndpoint',
         updateUserPinEndpoint: 'updateUserPinEndpoint',
         verifyPhoneEndpoint: 'verifyPhoneEndpoint',
         createUserByPhoneEndpoint: 'createUserByPhoneEndpoint',
