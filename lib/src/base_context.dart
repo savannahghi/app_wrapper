@@ -5,6 +5,8 @@ class BaseContext {
       required this.uploadFileEndPoint,
       required this.pinResetEndpoint,
       required this.requestPinResetEndpoint,
+      required this.respondedSecurityQuestionsEndpoint,
+      required this.verifySecurityQuestionsEndpoint,
       required this.updateUserPinEndpoint,
       required this.verifyPhoneEndpoint,
       required this.createUserByPhoneEndpoint,
@@ -23,6 +25,8 @@ class BaseContext {
   final String uploadFileEndPoint;
   final String pinResetEndpoint;
   final String? requestPinResetEndpoint;
+  final String? respondedSecurityQuestionsEndpoint;
+  final String? verifySecurityQuestionsEndpoint;
   final String updateUserPinEndpoint;
   final String verifyPhoneEndpoint;
   final String createUserByPhoneEndpoint;

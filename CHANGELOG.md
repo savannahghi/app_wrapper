@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.33
+
+- chore: add security questions endpoints
+
 ## 0.1.32
 
 - refactor: base context
