@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.34
+
+- chore: add refresh GetStream token endpoint
+
 ## 0.1.33
 
 - chore: add security questions endpoints
