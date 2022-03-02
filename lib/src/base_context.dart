@@ -12,6 +12,7 @@ class BaseContext {
       required this.createUserByPhoneEndpoint,
       required this.retryResendOtpEndpoint,
       required this.refreshTokenEndpoint,
+      required this.refreshStreamTokenEndpoint, 
       required this.anonymousLoginEndpoint,
       required this.userRecoveryPhoneNumbersEndpoint,
       required this.sendRecoverAccountOtpEndpoint,
@@ -32,6 +33,7 @@ class BaseContext {
   final String createUserByPhoneEndpoint;
   final String retryResendOtpEndpoint;
   final String refreshTokenEndpoint;
+  final String refreshStreamTokenEndpoint;
   final String anonymousLoginEndpoint;
   final String userRecoveryPhoneNumbersEndpoint;
   final String sendRecoverAccountOtpEndpoint;
