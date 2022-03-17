@@ -1,9 +1,9 @@
 library app_wrapper;
 
+import 'package:app_wrapper/app_wrapper.dart';
 import 'package:app_wrapper/src/base_context.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:app_wrapper/app_wrapper.dart';
 import 'package:flutter_graphql_client/graph_client.dart';
 
 /// [AppWrapper] Is a top level Class used to wrap your application.

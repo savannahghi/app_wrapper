@@ -1,5 +1,5 @@
-import 'package:flutter_test/flutter_test.dart';
 import 'package:app_wrapper/app_wrapper.dart';
+import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   final List<AppContext> prodContext = <AppContext>[
