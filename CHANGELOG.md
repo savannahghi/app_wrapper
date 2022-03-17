@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.35
+
+- chore: add reset PIN service request endpoint
+
 ## 0.1.34
 
 - chore: add refresh GetStream token endpoint

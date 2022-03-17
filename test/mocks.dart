@@ -1,6 +1,6 @@
+import 'package:app_wrapper/app_wrapper.dart';
 import 'package:camera/camera.dart';
 import 'package:local_auth/local_auth.dart';
-import 'package:app_wrapper/app_wrapper.dart';
 
 class MockDeviceCapabilities extends IDeviceCapabilities {}
 
