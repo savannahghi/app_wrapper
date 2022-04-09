@@ -21,6 +21,7 @@ class BaseContext {
     required this.verifyContactOTPEndpoint,
     required this.switchFlaggedFeaturesEndpoint,
     required this.pinResetServiceRequestEndpoint,
+    required this.optInClientEndpoint,
   });
 
   final String graphqlEndpoint;
@@ -44,4 +45,5 @@ class BaseContext {
   final String verifyContactOTPEndpoint;
   final String switchFlaggedFeaturesEndpoint;
   final String pinResetServiceRequestEndpoint;
+  final String optInClientEndpoint;
 }
