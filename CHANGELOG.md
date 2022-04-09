@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.1.36
+
+- chore: add opt in client end point
+
 ## 0.1.35
 
 - chore: add reset PIN service request endpoint

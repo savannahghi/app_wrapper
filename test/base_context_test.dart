@@ -25,8 +25,10 @@ void main() {
         sendContactVerificationOTPEndpoint:
             'sendContactVerificationOTPEndpoint',
         verifyContactOTPEndpoint: 'verifyContactOTPEndpoint',
-        switchFlaggedFeaturesEndpoint: 'switchFlaggedFeaturesEndpoint', refreshStreamTokenEndpoint: 'refreshStreamTokenEndpoint',
+        switchFlaggedFeaturesEndpoint: 'switchFlaggedFeaturesEndpoint',
+        refreshStreamTokenEndpoint: 'refreshStreamTokenEndpoint',
         pinResetServiceRequestEndpoint: 'pinResetServiceRequestEndpoint',
+        optInClientEndpoint: 'optInClientEndpoint',
       );
 
       expect(baseContext.graphqlEndpoint, 'graphqlEndpoint');
