@@ -39,7 +39,7 @@ jobs:
           name: Publish package to pub.dev
           no_output_timeout: 5m
           command: 
-            pub publish -f
+            dart pub publish -f
 
 workflows:
   version: 2
