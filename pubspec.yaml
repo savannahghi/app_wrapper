@@ -1,6 +1,6 @@
 name: app_wrapper
 description: A wrapper that is responsible for initializing various services and utilities needed to run apps safely.
-version: 0.1.36
+version: 0.2.0
 homepage: https://github.com/savannahghi/app_wrapper
 repository: https://github.com/savannahghi/app_wrapper
 issue_tracker: https://github.com/savannahghi/app_wrapper/issues
@@ -16,6 +16,7 @@ dependencies:
     sdk: flutter
   flutter_graphql_client: ^0.1.24
   local_auth: ^1.1.6
+  platform: ^3.1.0
 
 dev_dependencies:
   build_runner: ^2.0.4

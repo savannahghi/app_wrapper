@@ -1,11 +1,11 @@
-[![Release](https://img.shields.io/badge/Version-^0.1.36-success.svg?style=for-the-badge)](https://shields.io/)
+[![Release](https://img.shields.io/badge/Version-^0.2.0-success.svg?style=for-the-badge)](https://shields.io/)
 [![Maintained](https://img.shields.io/badge/Maintained-Actively-informational.svg?style=for-the-badge)](https://shields.io/)
 
 # app_wrapper
 
 `sil_app_wrapper` is an open source project &mdash; it's one among many other shared libraries that make up the wider ecosystem of software made and open sourced by `Savannah Informatics Limited`.
 
-It is a shared library between [BeWell-Consumer] and [BeWell-Professional] and is responsible for putting together everything that these app needs in order to run safely.
+It is a shared library between [BeWell-Consumer] and [SladeAdvantage] and is responsible for putting together everything that these app needs in order to run safely.
 
 ## Installation Instructions
 
@@ -23,7 +23,7 @@ This will add a line like this to your package's `pubspec.yaml` (and run an impl
 
 ```dart
 dependencies:
-  app_wrapper: ^0.1.36
+  app_wrapper: ^0.2.0
 ```
 
 Alternatively, your editor might support flutter pub get. Check the docs for your editor to learn more.

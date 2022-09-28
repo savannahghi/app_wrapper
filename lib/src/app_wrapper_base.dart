@@ -2,8 +2,6 @@ import 'package:app_wrapper/app_wrapper.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_graphql_client/graph_client.dart';
 
-import 'base_context.dart';
-
 /// [AppWrapperBase] is a top level base class used to efficiently propagate information down the tree.
 ///
 /// It extends [InheritedWidget] and provides consumers with additional data about the device the apps are running on.

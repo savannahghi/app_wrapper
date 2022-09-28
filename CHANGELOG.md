@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.0
+
+- chore: upgrade to flutter 3.0.5
+
 ## 0.1.36
 
 - chore: add opt in client end point
