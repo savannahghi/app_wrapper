@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.2.1
+
+- chore: upgrade flutter graphql client package
+
 ## 0.2.0
 
 - chore: upgrade to flutter 3.0.5
